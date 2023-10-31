@@ -12,14 +12,13 @@ export function createApp() {
       };
     },
     template: `
-      <div>
-        <button @click="count++" style="width: 58px; height: 30px; border: none; background-color: black; border-radius: 8px; color: #ffffff;">
-          {{ count }}
-        </button>
-        <ul>
-          <li v-for="(d, i) in data" :key="item">{{ d['id'] }}</li>
-        </ul>
-      </div>
+    <li className="py-4 flex">
+    <img className="h-10 w-10 rounded-full" src={team.logo} alt="" />
+    <div className="ml-3">
+      <p className="text-sm font-medium text-gray-900">{team.name}</p>
+      <p className="text-sm text-gray-500">{team.city}</p>
+    </div>
+  </li>
     `,
   });
 }
